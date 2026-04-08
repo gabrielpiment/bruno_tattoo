@@ -55,8 +55,15 @@
         @mouseenter="active = i"
         @mouseleave="active = null"
       >
+        <img
+          :src="style.thumb"
+          :alt="style.name"
+          class="absolute inset-0 w-full h-full object-cover"
+          style="filter: grayscale(100%) contrast(1.12);"
+        />
         <video
           :src="style.video"
+          :poster="style.thumb"
           :alt="style.name"
           class="absolute inset-0 w-full h-full object-cover"
           :style="{
