@@ -44,7 +44,7 @@
     </div>
 
     <!-- Right: testimonial content -->
-    <div class="flex flex-col justify-center px-8 md:px-14 pb-16 md:py-0 relative overflow-hidden">
+    <div class="flex flex-col justify-center px-8 md:px-14 pb-16 md:py-0 relative overflow-y-auto overflow-x-hidden scroll-track w-full">
       <!-- Thin left border accent (desktop) -->
       <div class="hidden md:block absolute left-0 top-[15%] bottom-[15%] w-px bg-[#1a1a18]/10" />
 

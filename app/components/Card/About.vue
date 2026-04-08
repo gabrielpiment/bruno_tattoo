@@ -18,10 +18,10 @@
     </div>
 
     <!-- Right: content -->
-    <div class="flex flex-col justify-center px-8 md:px-14 pt-12 pb-28 min-h-0 overflow-y-auto scroll-track">
-      <span class="font-body text-xs font-semibold tracking-[0.2em] uppercase text-[#f2ede6]/40 mb-3">Sobre o Estúdio</span>
+    <div class="flex flex-col justify-center px-8 md:px-14 pt-12 pb-28 min-h-0 overflow-y-auto overflow-x-hidden scroll-track w-full">
+      <span class="font-body text-xs font-semibold tracking-[0.2em] uppercase text-[#f2ede6]/40 mb-3 min-w-0 w-full break-words">Sobre o Estúdio</span>
 
-      <h2 class="font-display text-[clamp(2.8rem,6vw,6rem)] leading-[0.9] tracking-wide text-[#f2ede6] uppercase mb-5">
+      <h2 class="font-display text-[clamp(2.8rem,6vw,6rem)] leading-[0.9] tracking-wide text-[#f2ede6] uppercase mb-5 min-w-0 w-full break-words">
         Sua Arte<br>Sua<br>Identidade
       </h2>
 

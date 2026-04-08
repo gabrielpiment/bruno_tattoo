@@ -6,7 +6,7 @@
     <!-- Left: content -->
     <div
       ref="contentRef"
-      class="flex flex-col justify-center px-8 md:px-14 pt-12 pb-28 md:py-0 order-2 md:order-1 overflow-y-auto scroll-track"
+      class="flex flex-col justify-center px-8 md:px-14 pt-12 pb-28 md:py-0 order-2 md:order-1 overflow-y-auto overflow-x-hidden scroll-track w-full"
     >
       <!-- Eyebrow -->
       <div class="flex items-center gap-3 mb-4">
