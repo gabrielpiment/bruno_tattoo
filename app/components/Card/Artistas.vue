@@ -152,8 +152,8 @@
 <script setup lang="ts">
 const stats = [
   { value: '1',    label: 'Mestre Tatuador' },
-  { value: '15+',  label: 'Anos de Arte' },
-  { value: '5K+',  label: 'Histórias na Pele' },
+  { value: '5+',   label: 'Anos de Arte' },
+  { value: '1K+',  label: 'Histórias na Pele' },
 ]
 </script>
 
