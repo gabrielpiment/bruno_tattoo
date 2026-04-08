@@ -41,6 +41,7 @@ body::before {
 html, body {
   overflow: hidden;
   height: 100%;
+  overscroll-behavior: none;
 }
 
 /* Selection */
@@ -53,9 +54,13 @@ html, body {
 .scroll-track {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  overscroll-behavior-x: none;
 }
 .scroll-track::-webkit-scrollbar {
   display: none;
+}
+.scroll-track > * {
+  scroll-snap-stop: always;
 }
 
 /* Card entrance animation */

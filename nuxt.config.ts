@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       },
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
         { name: 'description', content: 'Estúdio de tatuagem em Uberaba, MG. Especialista em realismo, fineline e blackwork. Sua pele, sua história.' },
         { name: 'format-detection', content: 'telephone=no' },
         // Open Graph
