@@ -18,23 +18,23 @@
     </div>
 
     <!-- Right: content -->
-    <div class="flex flex-col justify-center px-8 md:px-14 py-20">
-      <span class="font-body text-xs font-semibold tracking-[0.2em] uppercase text-[#f2ede6]/40 mb-4">Sobre o Estúdio</span>
+    <div class="flex flex-col justify-center px-8 md:px-14 pt-12 pb-28 min-h-0 overflow-y-auto scroll-track">
+      <span class="font-body text-xs font-semibold tracking-[0.2em] uppercase text-[#f2ede6]/40 mb-3">Sobre o Estúdio</span>
 
-      <h2 class="font-display text-[clamp(3rem,6vw,6rem)] leading-[0.9] tracking-wide text-[#f2ede6] uppercase mb-8">
+      <h2 class="font-display text-[clamp(2.8rem,6vw,6rem)] leading-[0.9] tracking-wide text-[#f2ede6] uppercase mb-5">
         Sua Arte<br>Sua<br>Identidade
       </h2>
 
-      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed max-w-[45ch] mb-5">
+      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed max-w-[45ch] mb-4">
         Mais de 5 anos transformando visões em arte permanente. Cada traço é calculado, cada sombra é precisa — porque sua pele merece o melhor.
       </p>
 
-      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed max-w-[45ch] mb-10">
+      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed max-w-[45ch] mb-8">
         Trabalhamos com realismo, fineline, geek, old school, geométrico e blackwork. Orçamento gratuito incluso.
       </p>
 
       <!-- Info rows -->
-      <div class="flex flex-col gap-3 mb-10">
+      <div class="flex flex-col gap-3 mb-8">
         <div class="flex items-center gap-3">
           <span class="w-1 h-1 rounded-full bg-[#d42b2b]"></span>
           <span class="font-body text-sm font-semibold text-[#f2ede6] tracking-wide">Segunda – Sexta: 10h – 21h</span>

@@ -6,26 +6,26 @@
     <!-- Left: content -->
     <div
       ref="contentRef"
-      class="flex flex-col justify-center px-8 md:px-14 pt-20 pb-16 md:py-0 order-2 md:order-1"
+      class="flex flex-col justify-center px-8 md:px-14 pt-12 pb-28 md:py-0 order-2 md:order-1 overflow-y-auto scroll-track"
     >
       <!-- Eyebrow -->
-      <div class="flex items-center gap-3 mb-6">
+      <div class="flex items-center gap-3 mb-4">
         <span class="w-8 h-px bg-[#1a1a18]"></span>
         <span class="font-body text-xs font-semibold tracking-[0.2em] uppercase text-[#1a1a18]/60">UBERABA, MG</span>
       </div>
 
       <!-- Headline -->
-      <h1 class="font-display text-[clamp(4rem,10vw,9rem)] leading-[0.88] tracking-wide text-[#1a1a18] uppercase mb-6">
+      <h1 class="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.88] tracking-wide text-[#1a1a18] uppercase mb-4">
         Sua Pele<br>Sua<br>História
       </h1>
 
       <!-- Tagline -->
-      <p class="font-body italic text-lg md:text-xl text-[#1a1a18]/70 mb-3 font-light">
+      <p class="font-body italic text-base md:text-xl text-[#1a1a18]/70 mb-2 font-light">
         Deixe sua marca, conte sua história.
       </p>
 
       <!-- Body -->
-      <p class="font-body text-sm text-[#1a1a18]/50 leading-relaxed max-w-[42ch] mb-10">
+      <p class="font-body text-sm text-[#1a1a18]/50 leading-relaxed max-w-[42ch] mb-6">
         Cada tatuagem é uma história única gravada na pele. Agende sua sessão comigo.
       </p>
 
@@ -34,14 +34,14 @@
         <a
           href="https://wa.me/553484183658?text=Ol%C3%A1%20tudo%20bem%3F%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento"
           target="_blank"
-          class="font-body font-semibold text-sm tracking-widest uppercase px-7 py-3 border-2 border-[#1a1a18] text-[#1a1a18] hover:bg-[#1a1a18] hover:text-[#f2ede6] transition-all duration-300 active:scale-[0.98] text-center"
+          class="font-body font-semibold text-sm tracking-widest uppercase px-6 py-3 border-2 border-[#1a1a18] text-[#1a1a18] hover:bg-[#1a1a18] hover:text-[#f2ede6] transition-all duration-300 active:scale-[0.98] text-center"
           style="transition-timing-function: cubic-bezier(0.16,1,0.3,1)"
         >
           Fazer orçamento
         </a>
         <NuxtLink
           to="/portfolio"
-          class="font-body font-semibold text-sm tracking-widest uppercase px-7 py-3 border-2 border-[#1a1a18]/30 text-[#1a1a18]/60 hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-300 active:scale-[0.98]"
+          class="font-body font-semibold text-sm tracking-widest uppercase px-6 py-3 border-2 border-[#1a1a18]/30 text-[#1a1a18]/60 hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-300 active:scale-[0.98]"
           style="transition-timing-function: cubic-bezier(0.16,1,0.3,1)"
         >
           Portfólio
