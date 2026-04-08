@@ -51,11 +51,11 @@
       <!-- Testimonial transition wrapper -->
       <div class="relative">
         <transition name="fade-up" mode="out-in">
-          <div :key="current" class="flex flex-col gap-6">
+          <div :key="current" class="flex flex-col gap-6 min-w-0 w-full">
             <!-- Quote text -->
             <p
-              class="font-body text-[clamp(1rem,1.6vw,1.35rem)] text-[#1a1a18]/75 leading-relaxed"
-              style="max-width: 44ch;"
+              class="font-body text-[clamp(1rem,1.6vw,1.35rem)] text-[#1a1a18]/75 leading-relaxed min-w-0 w-full break-words"
+              style="max-width: min(44ch, 100%);"
             >
               "{{ testimonials[current].quote }}"
             </p>

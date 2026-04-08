@@ -20,12 +20,12 @@
       </h1>
 
       <!-- Tagline -->
-      <p class="font-body italic text-base md:text-xl text-[#1a1a18]/70 mb-2 font-light">
+      <p class="font-body italic text-base md:text-xl text-[#1a1a18]/70 mb-2 font-light min-w-0 w-full break-words">
         Deixe sua marca, conte sua história.
       </p>
 
       <!-- Body -->
-      <p class="font-body text-sm text-[#1a1a18]/50 leading-relaxed max-w-[42ch] mb-6">
+      <p class="font-body text-sm text-[#1a1a18]/50 leading-relaxed min-w-0 w-full break-words mb-6" style="max-width: min(42ch, 100%);">
         Cada tatuagem é uma história única gravada na pele. Agende sua sessão comigo.
       </p>
 
