@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "The user has installed taste-skill which teaches AI to create modern, premium designs with proper animations, spacing, and visual quality. They want to consult it before any design work.\n\nCheck if this user prompt is asking for design work (e.g., create component, design page, style UI, add section, make it look, etc.):\n\n$ARGUMENTS\n\nRespond ONLY with either:\n- 'DESIGN' if this is a design request\n- 'NOT_DESIGN' if this is not a design request",
+            "statusMessage": "Detecting design request..."
+          }
+        ]
+      }
+    ]
+  }
+}
