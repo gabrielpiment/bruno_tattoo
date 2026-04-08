@@ -67,6 +67,7 @@
           muted
           loop
           playsinline
+          preload="none"
           @mouseenter="($event.target as HTMLVideoElement).play()"
           @mouseleave="($event.target as HTMLVideoElement).pause(); ($event.target as HTMLVideoElement).currentTime = 0"
         ></video>
@@ -130,10 +131,10 @@
         </div>
       </div>
     </div>
-  <div v-if="modalOpen" class="fixed inset-0 flex items-center justify-center z-50 bg-black/40 backdrop-blur-sm" @click.self="closeModal">
-  <div class="relative w-11/12 max-w-md bg-[#1a1a18] rounded-xl overflow-hidden shadow-lg">
-    <button @click="closeModal" class="absolute top-2 right-2 text-white text-2xl font-bold">✕</button>
-    <video v-if="selectedStyle" :src="selectedStyle.video" autoplay muted loop playsinline class="w-full h-auto"></video>
+  <div v-if="modalOpen" class="fixed inset-0 flex items-center justify-center z-50 bg-black/50 backdrop-blur-md" @click.self="closeModal">
+  <div class="relative w-11/12 max-w-md bg-[#1a1a18] rounded-xl overflow-hidden shadow-2xl">
+    <button @click="closeModal" class="absolute top-3 right-3 text-white text-3xl font-bold z-50 drop-shadow-md">✕</button>
+    <video v-if="selectedStyle" :src="selectedStyle.video" :poster="selectedStyle.thumb" controls autoplay muted loop playsinline class="w-full h-auto bg-[#1a1a18]"></video>
   </div>
 </div>
 </section>

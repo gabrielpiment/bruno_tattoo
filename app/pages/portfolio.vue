@@ -34,12 +34,13 @@
           class="relative overflow-hidden group/item bg-[#1a1a18]"
         >
           <video 
+            ref="videoRefs"
             :src="video" 
-            autoplay 
             muted 
             loop 
-            playsinline 
-            class="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.15] brightness-[0.75] group-hover/item:grayscale-0 group-hover/item:brightness-100 group-hover/item:scale-105 transition-all duration-1000 ease-out"
+            playsinline
+            preload="none" 
+            class="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.15] brightness-[0.75] group-hover/item:grayscale-0 group-hover/item:brightness-100 group-hover/item:scale-105 transition-all duration-1000 ease-out bg-[#2a2a28]"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
         </div>
@@ -57,12 +58,13 @@
           class="relative overflow-hidden group/item bg-[#1a1a18]"
         >
           <video 
+            ref="videoRefs"
             :src="video" 
-            autoplay 
             muted 
             loop 
             playsinline 
-            class="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.15] brightness-[0.75] group-hover/item:grayscale-0 group-hover/item:brightness-100 group-hover/item:scale-105 transition-all duration-1000 ease-out"
+            preload="none"
+            class="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.15] brightness-[0.75] group-hover/item:grayscale-0 group-hover/item:brightness-100 group-hover/item:scale-105 transition-all duration-1000 ease-out bg-[#2a2a28]"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
         </div>
@@ -79,6 +81,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const scrollContainer = ref<HTMLElement | null>(null)
 const contentWrapper = ref<HTMLElement | null>(null)
+const videoRefs = ref<HTMLVideoElement[]>([])
 const isInteracting = ref(false)
 let interactionTimeout: ReturnType<typeof setTimeout>
 let animationFrameId: number
@@ -147,13 +150,37 @@ const autoScroll = () => {
   animationFrameId = requestAnimationFrame(autoScroll)
 }
 
+let observer: IntersectionObserver | null = null
+
 onMounted(() => {
   animationFrameId = requestAnimationFrame(autoScroll)
+
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target as HTMLVideoElement
+        if (entry.isIntersecting) {
+          video.play().catch(() => {})
+        } else {
+          video.pause()
+        }
+      })
+    }, { rootMargin: '100px' })
+
+    if (videoRefs.value) {
+      videoRefs.value.forEach(v => {
+        if (v) observer!.observe(v)
+      })
+    }
+  }
 })
 
 onUnmounted(() => {
   cancelAnimationFrame(animationFrameId)
   clearTimeout(interactionTimeout)
+  if (observer) {
+    observer.disconnect()
+  }
 })
 </script>
 
