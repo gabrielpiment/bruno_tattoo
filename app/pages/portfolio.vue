@@ -119,7 +119,7 @@ const videoGroups = [
   ],
   [
     '/videos/bruno/IMG_8798.mp4',
-    '/videos/bruno/IMG_8800 (1).mp4',
+    '/videos/bruno/IMG_8800_1.mp4',
     '/videos/bruno/IMG_8920.mp4',
     '/videos/bruno/IMG_8921.mp4'
   ]
