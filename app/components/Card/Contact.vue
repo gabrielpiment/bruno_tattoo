@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-screen max-w-[100vw] h-[100dvh] flex-shrink-0 flex flex-col relative overflow-hidden"
+    class="w-screen max-w-full h-[100dvh] flex-shrink-0 flex flex-col relative overflow-hidden"
     style="scroll-snap-align: start;"
   >
     <!-- Top: dark form area -->
@@ -12,7 +12,7 @@
         Sua Arte<br>Te Espera
       </h2>
 
-      <form class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-[580px]" @submit.prevent="onSubmit">
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[580px]" @submit.prevent="onSubmit">
         <div class="flex flex-col gap-1.5">
           <label class="font-body text-xs tracking-widest uppercase text-[#f2ede6]/40">Nome</label>
           <input

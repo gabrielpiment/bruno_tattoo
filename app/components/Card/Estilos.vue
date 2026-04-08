@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-screen max-w-[100vw] h-[100dvh] flex-shrink-0 flex flex-col md:flex-row relative overflow-hidden"
+    class="w-screen max-w-full h-[100dvh] flex-shrink-0 flex flex-col md:flex-row relative overflow-hidden"
     style="scroll-snap-align: start;"
   >
     <!-- Content panel (mobile: top strip, desktop: left column) -->

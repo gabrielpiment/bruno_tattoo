@@ -1,7 +1,7 @@
 <template>
   <section
-    class="w-screen max-w-[100vw] h-[100dvh] flex-shrink-0 grid grid-cols-1 md:grid-cols-2 relative overflow-hidden"
-    style="scroll-snap-align: start;"
+    class="w-screen max-w-full h-[100dvh] flex-shrink-0 grid grid-cols-1 md:grid-cols-2 relative overflow-hidden"
+    style="scroll-snap-align: start; background-color: #f2ede6;"
   >
     <!-- Left: content -->
     <div

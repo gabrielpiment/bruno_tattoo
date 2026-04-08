@@ -9,7 +9,7 @@ export function useHorizontalScroll(totalCards: number) {
 
   function onScroll() {
     if (!scrollContainer.value) return
-    const w = scrollContainer.value.clientWidth
+    const w = window.innerWidth
     if (w === 0) return
     currentSlide.value = Math.round(scrollContainer.value.scrollLeft / w)
   }
@@ -18,7 +18,7 @@ export function useHorizontalScroll(totalCards: number) {
     if (!scrollContainer.value) return
     const clamped = Math.max(0, Math.min(index, totalCards - 1))
     scrollContainer.value.scrollTo({
-      left: clamped * scrollContainer.value.clientWidth,
+      left: clamped * window.innerWidth,
       behavior: 'smooth',
     })
   }

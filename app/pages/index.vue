@@ -7,7 +7,7 @@
     <!-- Horizontal scroll container -->
     <div
       ref="scrollContainer"
-      class="flex h-[100dvh] overflow-x-auto overflow-y-hidden scroll-track"
+      class="flex h-[100dvh] w-full max-w-full overflow-x-auto overflow-y-hidden scroll-track"
       style="scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;"
       @scroll="onScroll"
     >
