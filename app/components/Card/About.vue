@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-screen max-w-[100vw] h-[100dvh] flex-shrink-0 grid grid-cols-1 md:grid-cols-2 relative overflow-hidden"
+    class="min-w-[100vw] h-[100dvh] flex-shrink-0 grid grid-cols-1 md:grid-cols-2 relative overflow-hidden"
     style="scroll-snap-align: start; background-color: #1a1a18;"
   >
     <!-- Left: photo -->
@@ -25,11 +25,11 @@
         Sua Arte<br>Sua<br>Identidade
       </h2>
 
-      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed max-w-[45ch] mb-4">
+      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed mb-4 min-w-0 w-full break-words" style="max-width: min(45ch, 100%)">
         Mais de 5 anos transformando visões em arte permanente. Cada traço é calculado, cada sombra é precisa — porque sua pele merece o melhor.
       </p>
 
-      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed max-w-[45ch] mb-8">
+      <p class="font-body text-sm text-[#f2ede6]/55 leading-relaxed mb-8 min-w-0 w-full break-words" style="max-width: min(45ch, 100%)">
         Trabalhamos com realismo, fineline, geek, old school, geométrico e blackwork. Orçamento gratuito incluso.
       </p>
 
