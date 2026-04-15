@@ -26,47 +26,63 @@
       </NuxtLink>
     </div>
 
-    <!-- Right: asymmetric photo grid -->
-    <div class="absolute right-0 top-0 w-[45%] md:w-[58%] h-full grid gap-1 p-1" style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr;">
-      <!-- Tall image spanning 2 rows -->
-      <div class="overflow-hidden" style="grid-row: 1 / 3;">
+    <!-- Right: New 5-photo grid -->
+    <div class="absolute right-0 top-0 w-[45%] md:w-[62%] h-full grid gap-1 p-1" style="grid-template-columns: 1fr 1fr; grid-template-rows: repeat(6, 1fr);">
+      <!-- 1. Espartano -->
+      <div class="relative overflow-hidden group cursor-pointer" style="grid-row: 1 / 4;">
         <img
-          src="/thumbnails/portfolio_1.png"
-          alt="Tatuagem Realista Braço"
-          class="w-full h-full object-cover"
-          style="filter: grayscale(100%) contrast(1.1);"
+          src="/thumbnails/portfolio_new_1.jpeg"
+          alt="Tatuagem Espartano"
+          class="w-full h-full object-cover grayscale contrast-[1.1] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
         />
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
       </div>
-      <!-- Top-right -->
-      <div class="overflow-hidden">
+      
+      <!-- 2. Anjo -->
+      <div class="relative overflow-hidden group cursor-pointer" style="grid-row: 1 / 3;">
         <img
-          src="/thumbnails/portfolio_2.png"
-          alt="Tatuagem Fine Line Detalhe"
-          class="w-full h-full object-cover"
-          style="filter: grayscale(100%) contrast(1.1);"
+          src="/thumbnails/portfolio_new_2.jpeg"
+          alt="Tatuagem Anjo"
+          class="w-full h-full object-cover grayscale contrast-[1.1] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
         />
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
       </div>
-      <!-- Middle-right -->
-      <div class="overflow-hidden">
+
+      <!-- 3. Camaleão -->
+      <div class="relative overflow-hidden group cursor-pointer" style="grid-row: 3 / 5;">
         <img
-          src="/thumbnails/portfolio_3.png"
-          alt="Tatuagem Blackwork Geométrico"
-          class="w-full h-full object-cover"
-          style="filter: grayscale(100%) contrast(1.1);"
+          src="/thumbnails/portfolio_new_3.jpeg"
+          alt="Tatuagem Camaleão"
+          class="w-full h-full object-cover grayscale contrast-[1.1] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
         />
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
       </div>
-      <!-- Wide bottom spanning 2 cols -->
-      <div class="overflow-hidden" style="grid-column: 1 / 3;">
+
+      <!-- 4. Caveira -->
+      <div class="relative overflow-hidden group cursor-pointer" style="grid-row: 4 / 7;">
         <img
-          src="/thumbnails/portfolio_4.png"
-          alt="Tatuagem Realista Sleeve"
-          class="w-full h-full object-cover"
-          style="filter: grayscale(100%) contrast(1.1);"
+          src="/thumbnails/portfolio_new_4.jpeg"
+          alt="Tatuagem Caveira"
+          class="w-full h-full object-cover grayscale contrast-[1.1] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
         />
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+      </div>
+
+      <!-- 5. Mão Flor -->
+      <div class="relative overflow-hidden group cursor-pointer" style="grid-row: 5 / 7;">
+        <img
+          src="/thumbnails/portfolio_new_5.jpeg"
+          alt="Tatuagem Flor"
+          class="w-full h-full object-cover grayscale contrast-[1.1] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+        />
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+</script>
 
 <style scoped>
 .font-display { font-family: 'Bebas Neue', sans-serif; }

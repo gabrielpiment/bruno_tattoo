@@ -68,10 +68,10 @@
       <img
         src="/images/bruno_artist.jpg"
         alt="Bruno Tattoo Artist"
-        class="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-[1.15] transition-all duration-[1200ms] cubic-bezier(0.16,1,0.3,1) group-hover:grayscale-0 group-hover:scale-110"
+        class="absolute inset-0 w-full h-full object-cover object-[center_50%] grayscale contrast-[1.15] transition-all duration-[1200ms] cubic-bezier(0.16,1,0.3,1) group-hover:grayscale-0 group-hover:scale-110"
       />
       <!-- Paper tear left edge -->
-      <svg class="absolute left-0 top-0 h-full w-14 z-10" viewBox="0 0 55 600" preserveAspectRatio="none" fill="#f2ede6" xmlns="http://www.w3.org/2000/svg">
+      <svg class="hidden md:block absolute left-0 top-0 h-full w-14 z-10" viewBox="0 0 55 600" preserveAspectRatio="none" fill="#f2ede6" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0L55 18L48 85L55 150L42 225L55 295L50 368L55 445L46 515L55 585L55 600L0 600Z"/>
       </svg>
 

@@ -40,14 +40,14 @@
       </div>
     </div>
 
-    <!-- Desktop: 5 vertical expanding image strips -->
+    <!-- Desktop: 5 vertical expanding video strips -->
     <div class="hidden md:flex flex-1 h-full">
       <div
         v-for="(style, i) in styles"
         :key="style.name"
-        class="relative h-full overflow-hidden cursor-pointer"
+        class="relative h-full overflow-hidden cursor-pointer bg-[#1a1a18]"
         :style="{
-          flexBasis: active === i ? '34%' : '16.5%',
+          flexBasis: active === null ? '20%' : (active === i ? '36%' : '16%'),
           transition: 'flex-basis 0.7s cubic-bezier(0.16,1,0.3,1)',
           flexShrink: 0,
           flexGrow: 0,
@@ -55,28 +55,19 @@
         @mouseenter="active = i"
         @mouseleave="active = null"
       >
-        <img
-          :src="style.thumb"
-          :alt="style.name"
-          class="absolute inset-0 w-full h-full object-cover"
-          style="filter: grayscale(100%) contrast(1.12);"
-        />
         <video
           :src="style.video"
-          :poster="style.thumb"
-          :alt="style.name"
           class="absolute inset-0 w-full h-full object-cover"
           :style="{
-            filter: 'grayscale(100%) contrast(1.12)',
-            opacity: active === i ? 1 : 0,
-            transition: 'opacity 0.5s ease',
+            filter: active === i ? 'grayscale(0%) contrast(1.1)' : 'grayscale(100%) contrast(1.12)',
+            opacity: active === i ? 1 : 0.65,
+            transition: 'all 0.6s ease',
           }"
+          autoplay
           muted
           loop
           playsinline
-          preload="none"
-          @mouseenter="($event.target as HTMLVideoElement).play()"
-          @mouseleave="($event.target as HTMLVideoElement).pause(); ($event.target as HTMLVideoElement).currentTime = 0"
+          preload="auto"
         ></video>
         <!-- Gradient overlay -->
         <div
@@ -121,16 +112,19 @@
       <div
         v-for="style in styles"
         :key="style.name"
-        class="relative flex-1 overflow-hidden"
+        class="relative flex-1 overflow-hidden bg-[#1a1a18]"
         @click="openModal(style)"
       >
-        <img
-          :src="style.thumb"
-          :alt="style.name"
-          class="absolute inset-0 w-full h-full object-cover"
-          style="filter: grayscale(100%) contrast(1.12);"
-        />
-        <div class="absolute inset-0 bg-[#1a1a18]/55 pointer-events-none"></div>
+        <video
+          :src="style.video"
+          class="absolute inset-0 w-full h-full object-cover grayscale opacity-50"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        ></video>
+        <div class="absolute inset-0 bg-[#1a1a18]/40 pointer-events-none"></div>
         <div class="absolute inset-0 flex items-center px-8">
           <span class="font-display text-[#f2ede6] text-2xl uppercase tracking-[0.15em]">
             {{ style.name }}
